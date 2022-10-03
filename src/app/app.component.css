@@ -10,14 +10,17 @@ header {
 header > .container {
   margin-left: auto;
   margin-right: auto;
-  width: 100vw;
   max-width: 1280px;
-  height: 100px;
-  padding: 2px;
+  /* height: 100px; */
+  padding: 2px 1rem;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
+}
+
+header .logo {
+  width: 64px;
 }
 
 .content {
