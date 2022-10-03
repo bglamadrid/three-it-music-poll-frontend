@@ -6,6 +6,7 @@ import { FormComponent } from './routes/form/form.component';
 import { ResultsComponent } from './routes/results/results.component';
 import { NotfoundComponent } from './routes/notfound/notfound.component';
 import { RestapiModule } from 'src/restapi/restapi.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { RestapiModule } from 'src/restapi/restapi.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RestapiModule
+    RestapiModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
