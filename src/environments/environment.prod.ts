@@ -1,3 +1,6 @@
 export const environment = {
-  production: true
+  production: true,
+  restapi: {
+    baseUrl: 'http://localhost:8080/v1'
+  }
 };
