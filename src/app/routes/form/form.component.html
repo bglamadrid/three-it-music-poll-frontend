@@ -16,4 +16,7 @@
     <button type="submit" mat-raised-button
       [disabled]="formGroup.invalid || !submitting.closed">Enviar</button>
   </div>
+  <ng-container *ngIf="!submitting.closed">
+    <mat-progress-bar mode="indeterminate" ></mat-progress-bar>
+  </ng-container>
 </form>
