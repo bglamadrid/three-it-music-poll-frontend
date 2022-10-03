@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './routes/form/form.component';
 import { ResultsComponent } from './routes/results/results.component';
 import { NotfoundComponent } from './routes/notfound/notfound.component';
+import { RestapiModule } from 'src/restapi/restapi.module';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { NotfoundComponent } from './routes/notfound/notfound.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    RestapiModule
   ],
   providers: [],
   bootstrap: [AppComponent]
