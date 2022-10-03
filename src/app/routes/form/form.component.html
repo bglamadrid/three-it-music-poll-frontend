@@ -1,1 +1,19 @@
-<p>form works!</p>
+<h1 align="center">Encuesta</h1>
+<form (submit)="onSubmit()" [formGroup]="formGroup">
+  <mat-form-field>
+    <mat-label>Estilo Musical</mat-label>
+    <mat-select formControlName="musicGenre">
+      <ng-container *ngFor="let musicGenreName of (musicGenreNames$ | async)">
+        <mat-option [value]="musicGenreName">{{ musicGenreName }}</mat-option>
+      </ng-container>
+    </mat-select>
+  </mat-form-field>
+  <mat-form-field>
+    <mat-label>Correo elecrónico</mat-label>
+    <input type="text" matInput formControlName="email" />
+  </mat-form-field>
+  <div class="buttons">
+    <button type="submit" mat-raised-button
+      [disabled]="formGroup.invalid || !submitting.closed">Enviar</button>
+  </div>
+</form>

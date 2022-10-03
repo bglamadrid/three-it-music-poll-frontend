@@ -1,15 +1,19 @@
 import { NgModule } from '@angular/core';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MatButtonModule } from '@angular/material/button';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatIconModule } from '@angular/material/icon';
+import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSelectModule } from '@angular/material/select';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { RestapiModule } from 'src/restapi/restapi.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FormComponent } from './routes/form/form.component';
-import { ResultsComponent } from './routes/results/results.component';
 import { NotfoundComponent } from './routes/notfound/notfound.component';
-import { RestapiModule } from 'src/restapi/restapi.module';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatIconModule } from '@angular/material/icon';
-import { MatMenuModule } from '@angular/material/menu';
+import { ResultsComponent } from './routes/results/results.component';
 
 @NgModule({
   declarations: [
@@ -23,9 +27,14 @@ import { MatMenuModule } from '@angular/material/menu';
     AppRoutingModule,
     RestapiModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatButtonModule,
+    MatFormFieldModule,
     MatIconModule,
-    MatMenuModule
+    MatInputModule,
+    MatMenuModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

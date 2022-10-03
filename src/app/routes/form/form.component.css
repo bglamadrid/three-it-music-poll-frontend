@@ -1,0 +1,21 @@
+:host {
+  padding: 1rem;
+}
+
+form {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 640px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+form > .buttons {
+  justify-self: center;
+}
+
+mat-form-field > mat-select,
+mat-form-field > input {
+  width: 100%;
+}
