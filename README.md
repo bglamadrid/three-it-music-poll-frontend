@@ -8,6 +8,8 @@ This project is the frontend for the application requested by [3IT](https://www.
 
 The main focus of this frontend application is to provide a graphic interface for users to submit their poll answers at.
 
+5-color palette generated using [Coolors](https://coolors.co/2c4251-6ab547-edd83d-d16666-9197ae).
+
 ## Features
 
 - Four views

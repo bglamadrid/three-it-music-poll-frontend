@@ -8,6 +8,8 @@ Este proyecto es el frontend para la aplicación solicitada por [3IT](https://ww
 
 El foco principal de esta aplicación frontend es proveer una interfaz gráfica donde los usuarios puedan ingresar sus respuestas.
 
+Paleta de 5 colores generada usando [Coolors](https://coolors.co/2c4251-6ab547-edd83d-d16666-9197ae).
+
 ## Características
 
 - Cuatro vistas

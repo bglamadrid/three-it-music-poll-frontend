@@ -2,3 +2,15 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+:root {
+  --color-slate: #2C4251;
+  --color-green: #6AB547;
+  --color-yellow: #EDD83D;
+  --color-red: #D16666;
+  --color-grey: #9197AE;
+}
+
+.flex-spacer-item {
+  flex: 1 1 0%;
+}
