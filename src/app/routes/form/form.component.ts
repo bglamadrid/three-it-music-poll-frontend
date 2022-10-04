@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Observable, Subscription } from 'rxjs';
 import { delay, tap } from 'rxjs/operators';
 import { PollForm } from 'src/app/models/PollForm';
@@ -19,7 +20,8 @@ export class FormComponent implements OnInit {
   constructor(
     formBuilder: FormBuilder,
     private musicGenresApi: MusicGenresService,
-    private pollAnswersApi: PollAnswersService
+    private pollAnswersApi: PollAnswersService,
+    private snackBarService: MatSnackBar
   ) {
     this.formGroup = formBuilder.group({
       musicGenre: ['', Validators.required],
@@ -38,10 +40,16 @@ export class FormComponent implements OnInit {
         delay(1000),
         tap({
           next: () => {
-            alert('OK!');
+            this.snackBarService.open('Su respuesta fue guardada con éxito. ¡Gracias por participar!', 'OK');
           },
-          error: () => {
-            alert('ERROR!');
+          error: (error) => {
+            if (error.status === 500) {
+              this.snackBarService.open('No puede enviar más de una respuesta con el mismo correo.', 'OK');
+            } else if (error.status === 400) {
+              this.snackBarService.open('Respuesta inválida. Verifique que la información ingresada es correcta e intente nuevamente.', 'OK');
+            } else {
+              this.snackBarService.open(`El servidor no pudo recibir su respuesta. Detalles del error: '${error.message}'`, 'OK');
+            }
           }
         })
       ).subscribe();
