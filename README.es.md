@@ -33,7 +33,7 @@ En una terminal, ejecuta `ng build` para compilar el proyecto. Los ficheros se a
 
 ### Ejecutar pruebas unitarias
 
-En una terminal, lanza `ng test` para ejecutar las pruebas unitarias vía [Karma](https://karma-runner.github.io).
+En una terminal, lanza `ng test` para ejecutar las pruebas unitarias vía [Karma](https://karma-runner.github.io). Ejecutar `ng test --no-watch --code-coverage` también creará un reporte de cobertura de código en el directorio `coverage/`.
 
 ### Ejecutar pruebas extremo-a-extremo (end-to-end)
 
