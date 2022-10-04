@@ -15,6 +15,7 @@ import { AppComponent } from './app.component';
 import { FormComponent } from './routes/form/form.component';
 import { NotfoundComponent } from './routes/notfound/notfound.component';
 import { ResultsComponent } from './routes/results/results.component';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { ResultsComponent } from './routes/results/results.component';
     MatInputModule,
     MatMenuModule,
     MatProgressBarModule,
-    MatSelectModule
+    MatSelectModule,
+    NgChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

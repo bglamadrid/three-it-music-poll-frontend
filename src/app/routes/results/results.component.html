@@ -1,1 +1,34 @@
-<p>results works!</p>
+<h1 align="center">Resultados</h1>
+<div class="buttons" align="center">
+  <button type="button" mat-raised-button
+    color="primary"
+    (click)="reload()"
+    [disabled]="loading">
+    <mat-icon>refresh</mat-icon>
+    <span>Recargar</span>
+  </button>
+</div>
+<ng-container *ngIf="loading">
+  <div class="load indicator" align="center">
+    <p><b>Cargando...</b></p>
+    <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+  </div>
+</ng-container>
+<ng-container *ngIf="error">
+  <div class="error indicator" align="center">
+    <p><mat-icon>error</mat-icon></p>
+    <p><b>Los resultados de la encuesta no pudieron ser cargados.</b></p>
+  </div>
+  <div class="error-details indicator">
+    <p><b>Detalles del error:</b></p>
+    <code>{{ errorDescription }}</code>
+  </div>
+</ng-container>
+<ng-container *ngIf="!loading && !error">
+  <div class="chart-container">
+    <canvas baseChart type="bar"
+      [data]="barChartData"
+      [options]="barChartOptions">
+    </canvas>
+  </div>
+</ng-container>

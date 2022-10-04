@@ -1,0 +1,33 @@
+:host {
+  padding: 1rem;
+}
+
+.buttons {
+  margin-top: 1rem;
+  margin-bottom: 4rem;
+}
+
+.indicator {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+}
+.load.indicator {
+  max-width: 240px;
+}
+.error.indicator {
+  max-width: 480px;
+}
+.error-details.indicator {
+  max-width: 640px;
+}
+
+.indicator mat-icon {
+  width: 3rem;
+  height: 3rem;
+  font-size: 3rem;
+}
+
+.chart-container {
+  padding: 0 1rem;
+}
